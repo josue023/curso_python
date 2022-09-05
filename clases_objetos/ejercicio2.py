@@ -5,16 +5,22 @@
 
 
 class Alumno:
-    nombre = ""
-    nota = 0
+    _nombre = ""
+    _nota = 0
 
     def __init__(self, nombre, nota):
-        self.nombre = nombre
-        self.nota = nota
+        self._nombre = nombre
+        self._nota = nota
+
+    def isNombre(self):
+        return self._nombre
+
+    def isNota(self):
+        return self._nota
 
     def isEstado(self):
 
-        if self.nota >= 7 :
+        if self._nota >= 7 :
             return "Aprobado"
 
         return "Reprobado"
@@ -22,6 +28,6 @@ class Alumno:
 
 a = Alumno("Caleb", 6.9)
 
-print(a.nombre)
-print(a.nota)
+print(a.isNombre())
+print(a.isNota())
 print(a.isEstado())
