@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Películas</h1>
+
+<h2>Lista de películas:</h2>
+
+
+    <table border="1">
+      <tr>
+        <th>Nombre:</th>
+        <th>Descripción:</th>
+        <th>Director:</th>
+      </tr>
+
+      {% for c in name_pelicula %}
+        <tr>
+          <td>{{ c }} &nbsp </td>
+          <td> &nbsp {{ c.descripcion }} &nbsp</td>
+          <td> &nbsp {{ c.director }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+
+{% endblock %}

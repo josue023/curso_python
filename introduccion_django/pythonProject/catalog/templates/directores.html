@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Directores de películas</h1>
+
+<h2>Nombres:</h2>
+
+  {% for c in name_director %}
+    <ul>
+      <li>{{ c }}</li>
+    </ul>
+  {% endfor %}
+
+{% endblock %}
